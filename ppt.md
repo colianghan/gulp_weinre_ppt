@@ -166,7 +166,7 @@ npm install gulp-jshint gulp-concat gulp-uglify gulp-rename gulp-sourcemap
  		.pipe(concat('index.js'))
  		.pipe(sorcemap.init())
  		.pipe(uglify())
-		.pipe(sourcemap.write())
+		.pipe(sourcemap.write('./'))
 		.pipe(gulp.dest('./js'))
  })
 ```
@@ -204,9 +204,9 @@ npm install gulp-cssmin
  gulp.task('cssmin',function(){
  	gulp.src(['./css/*.css','!./css/index.css'])
  		.pipe(concat('index.css'))
- 		.pipe(sorcemap.init())
+ 		.pipe(sourcemap.init())
  		.pipe(cssmin())
-		.pipe(sourcemap.write())
+		.pipe(sourcemap.write(./))
 		.pipe(gulp.dest('./css'))
  })
 ```
@@ -271,7 +271,7 @@ npm install gulp-cssmin
 	 imagemin = require('gulp-imagemin');
 
  gulp.task('watch',function(){
- 	gulp.watch('./js/*/*.js',['jsmin']);
+ 	gulp.watch(['./js/**/*.js','!./js/index.js'],['jsmin']);
  })
 
 [/note]
