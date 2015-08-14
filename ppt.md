@@ -126,7 +126,7 @@ gulp.task('imgmin',function(){
 });
 
 gulp.task('watch',function(){
-	gulp.watch('./js/**/*.js',['imgmin']);
+	gulp.watch(['./js/**/*.js','!./js/index.js'],['imgmin']);
 })
 
 ```
@@ -139,14 +139,14 @@ gulp.task('watch',function(){
 * gulp-concat --js文件的合并
 * gulp-uglify --js文件的压缩
 * gulp-rename --重新命名
-* gulp-sourcemap --可以生成map文件
+* gulp-sourcemaps --可以生成map文件
 * gulp-coffee(扩展)  --对coffee文件的编译
 
 [note]
 安装这些库文件
 
 ``` shell
-npm install gulp-jshint gulp-concat gulp-uglify gulp-rename gulp-sourcemap
+npm install gulp-jshint gulp-concat gulp-uglify gulp-rename gulp-sourcemaps
 
 ```
 
@@ -158,7 +158,7 @@ npm install gulp-jshint gulp-concat gulp-uglify gulp-rename gulp-sourcemap
  	 jshint = require('gulp-jshint'),
  	 concat = require('gulp-concat'),
  	 uglify = require('gulp-uglify'),
- 	 sourcemap = require('gulp-sourcemap')
+ 	 sourcemap = require('gulp-sourcemaps')
  gulp.task('jsmin',function(){
  	gulp.src(['./js/*.js','!./js/index.js]')
  		.pipe(jshint())
@@ -180,7 +180,7 @@ npm install gulp-jshint gulp-concat gulp-uglify gulp-rename gulp-sourcemap
 * gulp-concat --css文件的合并 {:&.bounceIn}
 * gulp-cssmin --css文件的压缩
 * gulp-rename --重新命名
-* gulp-sourcemap --可以生成map文件
+* gulp-sourcemaps --可以生成map文件
 * gulp-less/gulp-sass/gulp-stylus(扩展)  --对less/stylus/sass文件的编译
 
 [note]
@@ -199,7 +199,7 @@ npm install gulp-cssmin
  	 jshint = require('gulp-jshint'),
  	 concat = require('gulp-concat'),
  	 uglify = require('gulp-uglify'),
- 	 sourcemap = require('gulp-sourcemap'),
+ 	 sourcemap = require('gulp-sourcemaps'),
 	 cssmin = require('gulp-cssmin');
  gulp.task('cssmin',function(){
  	gulp.src(['./css/*.css','!./css/index.css'])
@@ -237,7 +237,7 @@ npm install gulp-cssmin
  	 jshint = require('gulp-jshint'),
  	 concat = require('gulp-concat'),
  	 uglify = require('gulp-uglify'),
- 	 sourcemap = require('gulp-sourcemap'),
+ 	 sourcemap = require('gulp-sourcemaps'),
 	 cssmin = require('gulp-cssmin'),
 	 imagemin = require('gulp-imagemin');
 
@@ -266,7 +266,7 @@ npm install gulp-cssmin
  	 jshint = require('gulp-jshint'),
  	 concat = require('gulp-concat'),
  	 uglify = require('gulp-uglify'),
- 	 sourcemap = require('gulp-sourcemap'),
+ 	 sourcemap = require('gulp-sourcemaps'),
 	 cssmin = require('gulp-cssmin'),
 	 imagemin = require('gulp-imagemin');
 
@@ -329,4 +329,4 @@ npm install gulp-cssmin
 [/subslide]
 
 [slide data-transition="pulse"]
-# 谢谢大家，再见
+# 以上，分享完毕
