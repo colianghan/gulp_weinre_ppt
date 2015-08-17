@@ -21,7 +21,7 @@
 
 ```bash
 
-  git clone https://github.com/colianghan/gulp_weinre_ppt.git | cd
+$ git clone https://github.com/colianghan/gulp_weinre_ppt.git && cd gulp_weinre_ppt
 
 ```
 
