@@ -22,7 +22,7 @@ node不是js的**应用**，而是js**运行平台** {:&.bounceIn}
 |:-------------|:-----------|
 |HTML+javascript |javascript|
 |渲染引擎+v8+Gpu...|v8|
-|中间层|中间层（libuv|
+|中间层|中间层（libuv)|
 |网卡、硬盘、显示器...|网卡、硬盘...|
 
 [slide]
@@ -103,7 +103,7 @@ node不是js的**应用**，而是js**运行平台** {:&.bounceIn}
  history | grep mobile_sy5
 ```
 
-pipe是类似一种linux中的管道机制的实现，可以实现文件流的链式操作 {:&.moveIn}
+pipe是集成了Unix系统大道至简的设计哲学的思想，可以实现文件流的链式操作 {:&.moveIn}
 
 
 [slide]
@@ -135,7 +135,7 @@ gulp.task('watch',function(){
 [slide]
 ##对js文件的语法检查,合并,压缩
 用到如下几个库：
-* gulp-jshint --js语法检查 {:&.bounceIn}
+* gulp-jshint(jshint-stylish) --js语法检查 {:&.bounceIn}
 * gulp-concat --js文件的合并
 * gulp-uglify --js文件的压缩
 * gulp-rename --重新命名
@@ -255,6 +255,7 @@ npm install gulp-cssmin
 ---
 用到如下几个库：
 * gulp-watch --对文件的监视 {:&.bounceIn}
+* gulp-plumber --对错误进行错误的处理
 
 
 [note]
@@ -292,6 +293,8 @@ npm install gulp-cssmin
 ## weinre的分享 
 ---
 万能的鸡肋调试工具 {:&.zoomIn}
+
+DebugGap 支持android端的调试 {:&.zoomIn}
 
 参考教程：http://yujiangshui.com/multidevice-frontend-debug/
 
