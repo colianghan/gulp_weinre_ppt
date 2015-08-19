@@ -274,7 +274,7 @@ npm install gulp-cssmin
  gulp.task('watch',function(){
  	gulp.watch(['./js/**/*.js','!./js/index.js'],['jsmin']);
  })
-
+```
 [/note]
 
 [slide]
@@ -333,3 +333,7 @@ DebugGap 支持android端的调试 {:&.zoomIn}
 
 [slide data-transition="pulse"]
 # 以上，分享完毕
+
+
+
+
